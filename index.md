@@ -1,37 +1,93 @@
-## Welcome to GitHub Pages
+---
+layout: home
+---
 
-You can use the [editor on GitHub](https://github.com/deeplang-org/deeplang-org.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+{% for category in site.categories %}
+{% if category contains "news" %}
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<h2>Upcoming Events</h2>
+<ul>
+    {% for post in category[1] %}
+    {% assign post_due_in_seconds = post.due_date | date: "%s" | plus: 0 %}
+    {% assign current_time_in_seconds = "now" | date: "%s" | minus: 0  %}
+    {% if post_due_in_seconds >= current_time_in_seconds %}
+    <li>
+      <a href="{{ post.url }}" style="color:black">{{ post.title }}</a>
+      {{ post.excerpt | markdownify }}
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}
+{% endfor %}
 
-### Markdown
+[Read More...](news)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<h2>Previous Talks</h2>
 
-```markdown
-Syntax highlighted code block
+{% for category in site.categories %}
+{% if category contains "talks" %} <!-- Take note here!! -->
+<ul>
+    {% for post in category[1] %}
+    {% assign post_due_in_seconds = post.due_date | date: "%s" | plus: 0 %}
+    {% assign current_time_in_seconds = "now" | date: "%s" | minus: 0  %}
+    {% if post_due_in_seconds < current_time_in_seconds %}
+    <li>
+      <a href="{{ post.url }}" style="color:black">{{ post.title }}</a>
+      {{ post.excerpt | markdownify }}
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}
+{% endfor %}
 
-# Header 1
-## Header 2
-### Header 3
+[Read More...](talks)
 
-- Bulleted
-- List
+<h2>About</h2>
 
-1. Numbered
-2. List
+Deeplang team is composed of students from [ZJU](http://www.zju.edu.cn/) & [USTC](https://www.ustc.edu.cn/). Deeplang is a light Interpreted programming language for IoT device.
 
-**Bold** and _Italic_ and `Code` text
+**Deeplang code repo**:  [GitHub](https://github.com/deeplang-org/deeplang).
 
-[Link](url) and ![Image](src)
+**Deeplang features**:
+
+- memory safe
+- static and strong type system
+- C-style
+- Mixed programming paradigm include procedural, object-oriented, logic
+
+We are designing a light language virtual machine named Deepvm. Deepvm is to support IoT chips include [ESP32](https://www.espressif.com/en/products/socs/esp32), HI3861, [Loongson 1C0300B](http://www.loongson.cn/product/cpu/1/Loongson1C.html).
+
+**Deepvm features**:
+
+- light REPL
+- light & fast memory management
+- support wasm file execution
+- ROM <= 100KB, RAM <= 50KB
+
+The code are hosted [here](https://github.com/deeplang-org/deeplang).
+
+If you would like to know more about us, please email [Eric](mailto:swubear@163.com), [Joey](mailto:joey.teng.dev@gmail.com) or [Thomas](mailto:wenzhang5800@gmail.com).
+
+## Example
+
+Fibonacci sequence codes (*fib.dp*) as follow:
+
+```C
+fun fib (n: i32) -> i32 {
+    if (i == 0) {
+        return 0;
+    } else if (i == 0) {
+        return 1;
+    } else {
+        return fib(i - 1) + fib(i - 2);
+    };
+};
+
+
+fun main () -> () {
+    let res: i32 = fib(10);
+    print(res.toString());
+};
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/deeplang-org/deeplang-org.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.

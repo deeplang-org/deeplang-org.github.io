@@ -1,1 +1,10 @@
+markdown: kramdown
 theme: jekyll-theme-slate
+# customisations of the theme
+name: Deeplang.org
+title: Deeplang.org
+author: Deeplang
+description: A programming language for IoT device.
+show_downloads: false
+github:
+  repository_url: https://github.com/deeplang-org/deeplang

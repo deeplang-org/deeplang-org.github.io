@@ -1,0 +1,16 @@
+---
+layout: default
+title: Blog
+---
+<h2>Latest News</h2>
+
+<ul>
+    {% for post in site.posts %}
+    {% if post.categories contains "news" %}
+    <li>
+        <a href="{{ post.url }}" style="color:black">{{ post.title }}</a>
+        {{ post.excerpt }}
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>

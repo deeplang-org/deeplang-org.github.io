@@ -1,0 +1,16 @@
+---
+layout: default
+title: Blog
+---
+<h2>Latest Talks</h2>
+
+<ul>
+    {% for post in site.posts %}
+    {% if post.categories contains "talks" %}
+    <li>
+        <a href="{{ post.url }}" style="color:black">{{ post.title }}</a>
+        {{ post.excerpt }}
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
