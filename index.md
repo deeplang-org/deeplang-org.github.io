@@ -48,9 +48,13 @@ layout: home
 
 Deeplang team is composed of students from [ZJU](http://www.zju.edu.cn/) & [USTC](https://www.ustc.edu.cn/). Deeplang is a light Interpreted programming language for IoT device.
 
-**Deeplang code repo**:  [GitHub](https://github.com/deeplang-org/deeplang).
+**Deeplang CCB**: [Core Team](https://github.com/deeplang-org/deeplang/wiki/Memnbers).
 
-**Deeplang features**:
+**Deeplang Repo**:  [GitHub](https://github.com/deeplang-org/deeplang).
+
+**Deeplang Wiki**: [Wiki](https://github.com/deeplang-org/deeplang/wiki).
+
+**Deeplang Features**:
 
 - memory safe
 - static and strong type system
@@ -59,7 +63,7 @@ Deeplang team is composed of students from [ZJU](http://www.zju.edu.cn/) & [USTC
 
 We are designing a light language virtual machine named Deepvm. Deepvm is to support IoT chips include [ESP32](https://www.espressif.com/en/products/socs/esp32), HI3861, [Loongson 1C0300B](http://www.loongson.cn/product/cpu/1/Loongson1C.html).
 
-**Deepvm features**:
+**Deepvm Features**:
 
 - light REPL
 - light & fast memory management
