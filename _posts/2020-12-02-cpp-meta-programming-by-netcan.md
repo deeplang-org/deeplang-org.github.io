@@ -29,11 +29,13 @@ Netcan will give us a talk about C++ metaprogramming.
 
 **Talk Context**：
 
-- template history
-- metaprogramming & functional programming
-- foundation of metaprogramming - TypeList
-- atom operation Map/Filter/Fold
-- metaprogramming practice 
+- computing in compiling time （metaprogramming）
+- history of metaprogramming
+- constexpr vs template meta
+- what about constexpr
+- application
+- future
+- conclusion
 
 <img src="https://deeplang.org/assets/images/atom-meta-programming.jpg" width="600" />
 
