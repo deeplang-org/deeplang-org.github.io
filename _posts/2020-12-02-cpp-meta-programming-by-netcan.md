@@ -31,9 +31,9 @@ Netcan will give us a talk about C++ metaprogramming.
 - atom operation Map/Filter/Fold
 - metaprogramming practice 
 
-<img src="../assets/images/metaprogramming.jpg" width="600" />
+<img src="https://deeplang.org/assets/images/metaprogramming.jpg" width="600" />
 
-<img src="../assets/images/atom-meta-programming.jpg" width="600" />
+<img src="https://deeplang.org/assets/images/atom-meta-programming.jpg" width="600" />
 
 
 Feel free to contact us via [email](mailto:swubear@163.com) if you are interested!
