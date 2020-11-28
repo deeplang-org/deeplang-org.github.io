@@ -21,7 +21,11 @@ Netcan will give us a talk about C++ metaprogramming.
 
 **Venue**: [Zoom Meeting](https://welink-meeting.zoom.us/j/605027896) , Meeting ID( 605 027 896 )  
 
-**Talk File**：[metaprogramming](https://deeplang.org/assets/files/Modern%20C++%E6%A8%A1%E6%9D%BF%E5%85%83%E7%BC%96%E7%A8%8B.pdf)
+**Talk Files**： 
+
+- talker share: [constexpr metaprogramming](https://deeplang.org/assets/files/CONSTEXPR%20%E4%BB%8E%2011%20%E5%88%B0%2020.pdf) 
+
+- help self: [template metaprogramming](https://deeplang.org/assets/files/Modern%20C++%E6%A8%A1%E6%9D%BF%E5%85%83%E7%BC%96%E7%A8%8B.pdf)
 
 **Talk Context**：
 
@@ -30,8 +34,6 @@ Netcan will give us a talk about C++ metaprogramming.
 - foundation of metaprogramming - TypeList
 - atom operation Map/Filter/Fold
 - metaprogramming practice 
-
-<img src="https://deeplang.org/assets/images/metaprogramming.jpg" width="600" />
 
 <img src="https://deeplang.org/assets/images/atom-meta-programming.jpg" width="600" />
 
