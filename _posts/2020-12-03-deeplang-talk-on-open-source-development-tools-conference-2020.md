@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "DeepLang talk on Open Source Development Tools Conference (OSDT2020)"
-date:   2020-12-3 19:00:00 +0800
-due_date: 2021-1-23 00:00:00 +0800
+date:   2020-12-3 16:00:00 +0800
+due_date: 2020-12-06 00:00:00 +0800
 categories: news talks
 excerpt_separator: <!--more-->
 ---
