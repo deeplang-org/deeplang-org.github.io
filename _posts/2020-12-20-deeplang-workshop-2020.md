@@ -7,11 +7,11 @@ categories: news talks
 excerpt_separator: <!--more-->
 ---
 
-Deeplang Workshop 2020. Deeplang is a IoT programming language. 
+Deeplang Workshop 2020. Deeplang is a new programming language for IoT device. 
 
 <!--more-->
 
-We have an active community for deeplang. Deeplang core team will share interesting PL features and . Of course, we will invite some exports to join us. 
+Deeplang is 7 months old now. We are designing his SPEC (80%) and a light compiler and vm (20%) named *Deepvm*. Deeplang [core team](https://github.com/deeplang-org/deeplang/wiki/Memnbers) would like to share our work with every PLer.  If you are interesting or want to join us, please feel free to contact us ([Eric](mailto:swubear@163.com), [Joey](mailto:joey.teng.dev@gmail.com) or [Thomas](mailto:wenzhang5800@gmail.com)).
 
 **Key words**：Deeplang,  Programming Language
 
@@ -21,7 +21,7 @@ We have an active community for deeplang. Deeplang core team will share interest
 
 **Venue**: Huawei  institute in hangzhou，[Zoom Meeting](https://welink-meeting.zoom.us/j/699326306) , Meeting ID(699 326 306)  
 
-**Schedule**: [Diao Zhongpu](https://github.com/diaozhongpu) will host the workshop.
+**Schedule**: [Diao Zhongpu](https://github.com/diaozhongpu) will host *Deeplang Workshop 2020*.
 
 | Time                     | Context                                                      | Author                                          |
 | ------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
@@ -33,13 +33,9 @@ We have an active community for deeplang. Deeplang core team will share interest
 | 2020-12-20 12:00 ~ 13:00 | Lunch Time                                                   |                                                 |
 | 2020-12-20 13:00 ~ 13:15 | Deepvm loader design                                         | [Zhou zidong](https://github.com/z123z123d)     |
 | 2020-12-20 13:15 ~ 13:30 | Deepvm interpreter design                                    | [Jiang yuchen](https://github.com/Rainc1116)    |
-| 2020-12-20 13:30 ~ 14:00 |                                                              | [Wu Sen](https://github.com/kulics)             |
-| 2020-12-20 14:00 ~ 14:15 | DSTP (Deepvm Serial Transfer Protocol) design                | Yang Hailong                                    |
+| 2020-12-20 13:30 ~ 14:00 | Something special                                            | [Wu Sen](https://github.com/kulics)             |
+| 2020-12-20 14:00 ~ 14:15 | DSTP (Deepvm Serial Transfer Protocol) design                | [Yang Hailong](http://yanghailong.me/)          |
 | 2020-12-20 14:15 ~ 15:00 | Free discussion                                              |                                                 |
-
-
-
-
 
 
 
