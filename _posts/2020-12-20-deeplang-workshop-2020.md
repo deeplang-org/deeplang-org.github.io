@@ -31,7 +31,7 @@ Deeplang is 7 months old now. We are designing his SPEC (80%) and a light compil
 | 2020-12-20 10:00 ~ 10:30 | Deepvm memory manage design                                  | [Teng Hongyu](https://github.com/JoeyTeng)      |
 | 2020-12-20 11:00 ~ 11:20 | Tea Time                                                     |                                                 |
 | 2020-12-20 11:20 ~ 11:40 | Deeplang AST design                                          | [Diao Zhongpu](https://github.com/diaozhongpu)  |
-| 2020-12-20 11:20 ~ 11:40 | Deeplang Parser Structure [[slides](https://deeplang.org/assets/files/deeplang-parser-structure-haotian.pdf)] | [Ma Haotian](https://github.com/haotianmichael) |
+| 2020-12-20 11:40 ~ 12:00 | Deeplang Parser Structure [[slides](https://deeplang.org/assets/files/deeplang-parser-structure-haotian.pdf)] | [Ma Haotian](https://github.com/haotianmichael) |
 | 2020-12-20 12:00 ~ 13:00 | Lunch Time                                                   |                                                 |
 | 2020-12-20 13:00 ~ 13:15 | Deepvm loader design                                         | [Zhou zidong](https://github.com/z123z123d)     |
 | 2020-12-20 13:15 ~ 13:30 | Deepvm interpreter design                                    | [Jiang yuchen](https://github.com/Rainc1116)    |
