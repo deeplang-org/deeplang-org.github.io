@@ -28,7 +28,7 @@ Deeplang is 7 months old now. We are designing his SPEC (80%) and a light compil
 | ------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
 | 2020-12-20 9:00 ~ 9:30   | Check In                                                     |                                                 |
 | 2020-12-20 9:30 ~ 10:00  | Deeplang: a language for IoT device [[slides](https://deeplang.org/assets/files/deeplang-a-new-language-for-IoT-device.pdf)] | [Yang Wenzhang](https://github.com/thomasyonug) |
-| 2020-12-20 10:00 ~ 10:30 | Deepvm memory manage design                                  | [Teng Hongyu](https://github.com/JoeyTeng)      |
+| 2020-12-20 10:00 ~ 10:30 | Deepvm memory manage design[[slides](https://deeplang.org/assets/files/deepvm-mem-man.pdf)] | [Teng Hongyu](https://github.com/JoeyTeng)      |
 | 2020-12-20 11:00 ~ 11:20 | Tea Time                                                     |                                                 |
 | 2020-12-20 11:20 ~ 11:40 | Deeplang AST design                                          | [Diao Zhongpu](https://github.com/diaozhongpu)  |
 | 2020-12-20 11:40 ~ 12:00 | Deeplang Parser Structure [[slides](https://deeplang.org/assets/files/deeplang-parser-structure-haotian.pdf)] | [Ma Haotian](https://github.com/haotianmichael) |
