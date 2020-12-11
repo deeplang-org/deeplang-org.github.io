@@ -33,7 +33,7 @@ Deeplang is 7 months old now. We are designing his SPEC (80%) and a light compil
 | 2020-12-20 11:20 ~ 12:00 | Deeplang AST design                                          | [Diao Zhongpu](https://github.com/diaozhongpu)  |
 | 2020-12-20 12:00 ~ 13:00 | Lunch Time                                                   |                                                 |
 | 2020-12-20 13:00 ~ 13:30 | Deeplang Parser Structure [[slides](https://deeplang.org/assets/files/deeplang-parser-structure-haotian.pdf)] | [Ma Haotian](https://github.com/haotianmichael) |
-| 2020-12-20 13:30 ~ 14:00 | Something special                                            | [Wu Sen](https://github.com/kulics)             |
+| 2020-12-20 13:30 ~ 14:00 | Feel language syntax design                                  | [Wu Sen](https://github.com/kulics)             |
 | 2020-12-20 14:00 ~ 14:15 | DSTP (Deepvm Serial Transfer Protocol) design                | [Yang Hailong](http://yanghailong.me/)          |
 | 2020-12-20 14:15 ~ 15:00 | Free discussion                                              |                                                 |
 
