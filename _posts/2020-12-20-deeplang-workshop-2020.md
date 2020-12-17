@@ -29,10 +29,11 @@ Deeplang is 7 months old now. We are designing his SPEC (80%) and a light compil
 | 2020-12-20 9:00 ~ 9:30   | Check In                                                     |                                                 |
 | 2020-12-20 9:30 ~ 10:00  | Deeplang: a language for IoT device [[slides](https://deeplang.org/assets/files/deeplang-a-new-language-for-IoT-device.pdf)] | [Yang Wenzhang](https://github.com/thomasyonug) |
 | 2020-12-20 10:00 ~ 10:30 | Deepvm memory manage design[[slides](https://deeplang.org/assets/files/deepvm-mem-man.pdf)] | [Teng Hongyu](https://github.com/JoeyTeng)      |
+| 2020-12-20 10:30 ~ 11:00 | Memory manage discussion                                     |                                                 |
 | 2020-12-20 11:00 ~ 11:20 | Tea Time                                                     |                                                 |
 | 2020-12-20 11:20 ~ 12:00 | Deeplang AST design[[slides](https://deeplang.org/assets/files/deeplang ast design.pdf)] | [Diao Zhongpu](https://github.com/diaozhongpu)  |
 | 2020-12-20 12:00 ~ 13:00 | Lunch Time                                                   |                                                 |
-| 2020-12-20 13:00 ~ 13:30 | Deeplang Parser Structure [[slides](https://deeplang.org/assets/files/deeplang-parser-structure-haotian.pdf)] | [Ma Haotian](https://github.com/haotianmichael) |
+| 2020-12-20 13:00 ~ 13:30 | Deeplang frontend design [[slides](https://deeplang.org/assets/files/deeplang-frentend-design-haotian.pdf)] | [Ma Haotian](https://github.com/haotianmichael) |
 | 2020-12-20 13:30 ~ 14:00 | Feel language syntax design                                  | [Wu Sen](https://github.com/kulics)             |
 | 2020-12-20 14:00 ~ 14:15 | DSTP design [[slides](https://deeplang.org/assets/files/DSTP Design.pdf)] | [Yang Hailong](http://yanghailong.me/)          |
 | 2020-12-20 14:15 ~ 15:00 | Free discussion                                              |                                                 |
