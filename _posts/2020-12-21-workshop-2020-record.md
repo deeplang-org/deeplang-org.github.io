@@ -14,6 +14,13 @@ Deeplang contributors come to *deeplang workshop 2020* in hangzhou. We share our
 
 Deeplang contributors come to *deeplang workshop 2020* in hangzhou. We share our work about SPEC,  compiler, and deepvm. They are Yang Wenzhang, Teng Hongyu, Diao Zhongpu, Ma Haotian, Zhao Yang, Wu sen, Yang Hailong , Zhang Song, Wu Minchao and so on.
 
+**Workshop video**:
+
+- baidu disk : [url](https://pan.baidu.com/s/1wGgcCqLDnW7zJeCq9oiIpw)
+- passcode : bruc
+
+**Workshop Slides**:
+
 | No   | Title                                                        | Talker                                          |
 | ---- | ------------------------------------------------------------ | ----------------------------------------------- |
 | 1    | Deeplang: a language for IoT device [[slides](https://deeplang.org/assets/files/deeplang-a-new-language-for-IoT-device.pdf)] | [Yang Wenzhang](https://github.com/thomasyonug) |
