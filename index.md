@@ -79,19 +79,18 @@ If you would like to know more about us, please email [Eric](mailto:swubear@163.
 Fibonacci sequence codes (*fib.dp*) as follow:
 
 ```C
-fun fib (n: i32) -> i32 {
-    if (i == 0) {
+fun fib(i : i32) -> i32 {
+    if i == 0{
         return 0;
-    } else if (i == 0) {
+    }else if i == 1{
         return 1;
-    } else {
+    }else {
         return fib(i - 1) + fib(i - 2);
-    };
-};
+    }
+}
 
-
-fun main () -> () {
-    let res: i32 = fib(10);
+fun main() -> () {
+    let res : i32 = fib(10);
     print(res.toString());
-};
+}
 ```
