@@ -11,7 +11,7 @@ Zhai xuguang will give us a talk about transpilers such as babel, terser, eslint
 
 <!--more-->
 
-Zhai xuguang is a web frontend engineer and works for Ali gaode group.  He will give us a talk about transpilers such as babel, terser, eslint, prettier, postcss, stylelint, posthtml,  vue template compiler. He also talk about to how to use in bundler.
+Zhai xuguang is a web frontend engineer and works for Ali gaode group.  He will give us a talk about transpilers such as babel, terser, eslint, prettier, postcss, stylelint, posthtml,  vue template compiler. 
 
 **Key words**: transpiler, web
 
