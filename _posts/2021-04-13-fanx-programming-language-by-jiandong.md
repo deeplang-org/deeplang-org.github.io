@@ -28,7 +28,7 @@ Jiandong is  author of Fanx language.  He designed modern language features for 
 - Fanx & Fantom
 - Fanx features
 
-<img src="http://deeplang.org/assets/images/fanx.jpg" width="700">
+<img src="http://deeplang.org/assets/images/fanx.jpg" width="50%">
 
 
 Feel free to contact us via [email](mailto:swubear@163.com) if you are interested!
