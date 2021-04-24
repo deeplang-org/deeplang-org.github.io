@@ -17,7 +17,7 @@ Jiandong is  author of Fanx language.  He designed modern language features for 
 
 **Title**: Fanx is a programming language for application developing
 
-**Talk File**: [slides](https://deeplang.org/assets/files/fanx-programming-language.pptx)
+**Talk File**: [slides](https://deeplang.org/assets/files/fanx-programming-language.pdf)
 
 **Time**: 2021-04-24 10:00-11:00((UTC+08:00)Beijing)  
 
