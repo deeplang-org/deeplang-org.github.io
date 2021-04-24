@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Fanx is a programming language for application developing"
-date:   2021-04-26 15:00:00 +0800
+date:   2021-04-24 15:00:00 +0800
 due_date: 2021-05-30 00:00:00 +0800
 categories: news talks
 excerpt_separator: <!--more-->
@@ -17,7 +17,7 @@ Jiandong is  author of Fanx language.  He designed modern language features for 
 
 **Title**: Fanx is a programming language for application developing
 
-**Talk File**: slides
+**Talk File**: [slides](https://deeplang.org/assets/files/fanx-programming-language.pptx)
 
 **Time**: 2021-04-24 10:00-11:00((UTC+08:00)Beijing)  
 
