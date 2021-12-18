@@ -48,7 +48,7 @@ layout: home
 
 Deeplang team is composed of students from [ZJU](http://www.zju.edu.cn/) & [USTC](https://www.ustc.edu.cn/). Deeplang is a light Interpreted programming language for IoT device.
 
-**Deeplang CCB**: [Core Team](https://github.com/deeplang-org/deeplang/wiki/Memnbers).
+**Deeplang CCB**: [Core Team](https://github.com/deeplang-org/deeplang/wiki/CCB-Memnbers).
 
 **Deeplang Repo**:  [GitHub](https://github.com/deeplang-org/deeplang).
 
