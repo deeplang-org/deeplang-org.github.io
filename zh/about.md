@@ -3,6 +3,7 @@ layout: base
 lang: zh
 title: 关于 DeepLang
 description: 关于 DeepLang 编程语言
+permalink: /zh/about/
 ---
 {% assign t = site.data[page.lang] %}
 {% assign a = t.about_page %}

@@ -3,6 +3,7 @@ layout: base
 lang: en
 title: About DeepLang
 description: About the DeepLang programming language
+permalink: /about/
 ---
 {% assign t = site.data[page.lang] %}
 {% assign a = t.about_page %}
