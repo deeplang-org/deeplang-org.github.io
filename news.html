@@ -1,19 +1,26 @@
 ---
 layout: page
 lang: en
-title: Latest News
+title: News & Events
 permalink: /news/
 ---
 {% assign t = site.data[page.lang] %}
 
-{% assign news_posts = site.posts | where_exp: "post", "post.categories contains 'news'" %}
+{% assign all_posts = site.posts | sort: "date" | reverse %}
 
-{% if news_posts.size > 0 %}
+{% if all_posts.size > 0 %}
 <ul class="posts-list">
-    {% for post in news_posts %}
+    {% for post in all_posts %}
     <li>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+        {% if post.categories.size > 0 %}
+        <span class="post-cats">
+            {% for cat in post.categories %}
+            <span class="post-cat">{{ cat }}</span>
+            {% endfor %}
+        </span>
+        {% endif %}
         {{ post.excerpt | markdownify }}
     </li>
     {% endfor %}

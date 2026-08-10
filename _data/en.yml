@@ -4,7 +4,7 @@ nav:
   home: "Home"
   about: "About"
   news: "News"
-  talks: "Talks"
+  download: "Download"
   github: "GitHub"
   lang: "中文"
 
@@ -65,7 +65,7 @@ compiler:
 
 code_example:
   title: "Try DeepLang"
-  subtitle: "A quick look at the syntax — Fibonacci sequence"
+  subtitle: "ADT + Pattern Matching + Interfaces — the essence of DeepLang"
 
 deepvm:
   title: "DeepVM"
@@ -108,12 +108,30 @@ footer:
   published: "Published with GitHub Pages"
 
 news_page:
-  title: "Latest News"
+  title: "News & Events"
   no_posts: "No news yet."
 
-talks_page:
-  title: "Talks & Events"
-  no_posts: "No talks yet."
+download_page:
+  title: "Download"
+  subtitle: "Get the latest DeepLang toolchain — compiler, VM, and specification"
+  deepc:
+    name: "deepc"
+    description: "The DeepLang compiler. Compiles DeepLang source code (.dp) through lexing, parsing, semantic analysis, and ANF conversion into WebAssembly Text Format (.wat). Implemented in OCaml with a formal type checker."
+    latest: "Latest Build"
+    source: "Build from Source"
+    repo: "deeplang-type-system"
+  deepvm:
+    name: "DeepVM"
+    description: "The DeepLang virtual machine — a lightweight, memory-efficient runtime for AIoT edge devices. Supports native WASM execution, interactive REPL, and bump-allocator memory management. ROM ≤ 100KB, RAM ≤ 50KB."
+    latest: "Latest Release"
+    source: "Build from Source"
+    repo: "deeplang"
+  spec:
+    name: "Language Specification"
+    description: "The official DeepLang language specification — syntax, type system, semantics, and standard library documentation. Essential reference for language users and contributors."
+    latest: "Latest Spec (PDF)"
+    source: "View on GitHub"
+    repo: "deeplang"
 
 about_page:
   title: "About DeepLang"

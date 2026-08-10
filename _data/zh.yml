@@ -4,7 +4,7 @@ nav:
   home: "首页"
   about: "关于"
   news: "动态"
-  talks: "讲座"
+  download: "下载"
   github: "GitHub"
   lang: "English"
 
@@ -65,7 +65,7 @@ compiler:
 
 code_example:
   title: "一试便知"
-  subtitle: "Fibonacci 数列 —— 快速感受 DeepLang 语法"
+  subtitle: "代数数据类型 + 模式匹配 + 接口 —— 感受 DeepLang 的核心魅力"
 
 deepvm:
   title: "DeepVM"
@@ -108,12 +108,30 @@ footer:
   published: "基于 GitHub Pages 发布"
 
 news_page:
-  title: "最新动态"
+  title: "动态与活动"
   no_posts: "暂无动态。"
 
-talks_page:
-  title: "讲座与活动"
-  no_posts: "暂无讲座。"
+download_page:
+  title: "下载"
+  subtitle: "获取最新 DeepLang 工具链 —— 编译器、虚拟机与语言规范"
+  deepc:
+    name: "deepc"
+    description: "DeepLang 编译器。将 DeepLang 源码 (.dp) 经过词法分析、语法解析、语义分析和 ANF 转换，编译为 WebAssembly 文本格式 (.wat)。基于 OCaml 实现，配备形式化类型检查器。"
+    latest: "最新构建"
+    source: "从源码构建"
+    repo: "deeplang-type-system"
+  deepvm:
+    name: "DeepVM"
+    description: "DeepLang 虚拟机 —— 为 AIoT 边缘设备打造的轻量级、高效率运行时。支持原生 WASM 执行、交互式 REPL 和 Bump Allocator 内存管理。ROM ≤ 100KB，RAM ≤ 50KB。"
+    latest: "最新发布"
+    source: "从源码构建"
+    repo: "deeplang"
+  spec:
+    name: "语言规范"
+    description: "DeepLang 官方语言规范 —— 涵盖语法、类型系统、语义和标准库文档。语言用户和贡献者的必备参考。"
+    latest: "最新规范 (PDF)"
+    source: "在 GitHub 上查看"
+    repo: "deeplang"
 
 about_page:
   title: "关于 DeepLang"

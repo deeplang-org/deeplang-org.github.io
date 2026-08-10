@@ -779,6 +779,81 @@ img {
     font-weight: 500;
 }
 
+/* --- Download Cards --- */
+.download-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+}
+
+.download-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.download-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px var(--color-card-shadow);
+}
+
+.download-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.download-card h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.download-card p {
+    font-size: 0.925rem;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    margin-bottom: 24px;
+    flex: 1;
+}
+
+.download-card-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.download-card-repo {
+    font-size: 0.8rem;
+    color: var(--color-text-tertiary);
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* --- Post Category Tags --- */
+.post-cats {
+    display: inline-flex;
+    gap: 6px;
+    margin-left: 8px;
+}
+
+.post-cat {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-tertiary);
+    background: var(--color-bg-secondary);
+}
+
 /* --- Post Layout --- */
 .post {
     max-width: 800px;
@@ -1044,6 +1119,10 @@ img {
     }
 
     .type-highlights ul {
+        grid-template-columns: 1fr;
+    }
+
+    .download-cards {
         grid-template-columns: 1fr;
     }
 

@@ -94,22 +94,37 @@ description: DeepLang —— 面向 AIoT 与边缘 AI 的内存安全编程语�
         <div class="code-block">
             <div class="code-block-header">
                 <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
-                <span class="code-filename">fib.dp</span>
+                <span class="code-filename">geometry.dp</span>
             </div>
 {% highlight c %}
-fun fib(i: i32) -> i32 {
-    if i == 0 {
-        return 0;
-    } else if i == 1 {
-        return 1;
-    } else {
-        return fib(i - 1) + fib(i - 2);
+// 代数数据类型：几何形状
+type Shape [
+    Rectangle(width: F64, height: F64),
+    Circle(radius: F64),
+    Nothing
+]
+
+// 接口：计算面积
+interface Area {
+    fun area(this) -> F64;
+}
+
+// 通过模式匹配为 Shape 实现 Area 接口
+impl Area for Shape {
+    fun area() -> F64 {
+        match (this) {
+            Rectangle(w, h) => { return w * h; }
+            Circle(r)       => { return 3.14159 * r * r; }
+            Nothing         => { return 0.0; }
+        }
     }
 }
 
 fun main() -> () {
-    let res: i32 = fib(10);
-    print(res.toString());
+    let rect: Shape = Rectangle(3.0, 4.0);
+    let circ: Shape = Circle(2.5);
+    print(rect.area().toString());  // 12.0
+    print(circ.area().toString());  // 19.6349
 }
 {% endhighlight %}
         </div>
