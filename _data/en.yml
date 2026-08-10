@@ -135,12 +135,44 @@ download_page:
 
 about_page:
   title: "About DeepLang"
-  intro: "DeepLang is an open-source programming language designed by students from ZJU, USTC, Imperial College London and other universities. We are building a safe, efficient, and developer-friendly language for the AIoT and edge AI era."
-  origins: "Origins"
-  origins_text: "Started in 2020, DeepLang was born from the idea that AIoT development shouldn't sacrifice safety for performance. Existing languages either require large runtimes (Python, JavaScript), lack memory safety (C, C++), or are too complex for resource-constrained edge devices. DeepLang fills this gap with a modern type system, memory safety guarantees, and direct compilation to WebAssembly."
-  community: "Community"
-  community_text: "Our community includes students, researchers, and industry professionals passionate about programming languages, compilers, type systems, and edge computing. We hold regular talks and workshops, and actively develop the compiler toolchain."
-  repo: "Source Code"
+  subtitle: "Building a safer, smarter future for edge computing"
+  mission:
+    title: "Our Mission"
+    text: "DeepLang is an open-source programming language designed by students from ZJU, USTC, Imperial College London and other universities. We are building a safe, efficient, and developer-friendly language for the AIoT and edge AI era — one that brings the safety guarantees of modern language design to the world of resource-constrained devices."
+  timeline:
+    title: "Project Timeline"
+    items:
+      - year: "2020"
+        title: "The Beginning"
+        desc: "DeepLang project launched. Core team formed. Initial language spec drafted, DeepVM design started."
+      - year: "2021"
+        title: "Community Growth"
+        desc: "Regular tech talks began. First workshop held in Hangzhou. Compiler frontend, type system, and ANF conversion implemented."
+      - year: "2022"
+        title: "Compiler Maturation"
+        desc: "OCaml-based type system and compiler pipeline completed. WASM code generation. Language spec stabilized."
+      - year: "2024+"
+        title: "AIoT & Edge AI"
+        desc: "Expanded focus to AIoT and edge AI. Ongoing compiler optimization, broader chip support, and ecosystem development."
+  repos:
+    title: "Repositories"
+    items:
+      - name: "deeplang"
+        desc: "Main repository — language specification, DeepVM runtime, documentation, and examples."
+        icon: "📦"
+      - name: "deeplang-type-system"
+        desc: "Compiler frontend in OCaml — lexer, parser, semantic walker, ANF conversion, and WASM code generation."
+        icon: "🔧"
+  contact:
+    title: "Get in Touch"
+    text: "Interested in DeepLang? Want to contribute, collaborate, or just learn more? Reach out to the team."
+    items:
+      - label: "Eric"
+        mail: "swubear@163.com"
+      - label: "Joey"
+        mail: "joey.teng.dev@gmail.com"
+      - label: "Thomas"
+        mail: "wenzhang5800@gmail.com"
 
 not_found:
   title: "404 — Page Not Found"

@@ -1,24 +1,84 @@
 ---
-layout: page
+layout: base
 lang: en
 title: About DeepLang
 description: About the DeepLang programming language
-permalink: /about/
 ---
 {% assign t = site.data[page.lang] %}
+{% assign a = t.about_page %}
 
-## {{ t.about_page.intro }}
+<!-- Hero -->
+<section class="about-hero">
+    <div class="about-hero-inner">
+        <h1>{{ a.title }}</h1>
+        <p class="about-hero-sub">{{ a.subtitle }}</p>
+    </div>
+</section>
 
-### {{ t.about_page.origins }}
+<!-- Mission -->
+<section class="section">
+    <div class="section-inner">
+        <div class="about-mission">
+            <h2>{{ a.mission.title }}</h2>
+            <p>{{ a.mission.text }}</p>
+        </div>
+    </div>
+</section>
 
-{{ t.about_page.origins_text }}
+<!-- Timeline -->
+<section class="section section-alt">
+    <div class="section-inner">
+        <h2 class="about-section-title">{{ a.timeline.title }}</h2>
+        <div class="timeline">
+            {% for item in a.timeline.items %}
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <span class="timeline-year">{{ item.year }}</span>
+                </div>
+                <div class="timeline-body">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.desc }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
-### {{ t.about_page.community }}
+<!-- Repositories -->
+<section class="section">
+    <div class="section-inner">
+        <h2 class="about-section-title">{{ a.repos.title }}</h2>
+        <div class="about-repos">
+            {% for repo in a.repos.items %}
+            <a href="https://github.com/deeplang-org/{{ repo.name }}" class="about-repo-card" target="_blank" rel="noopener">
+                <span class="about-repo-icon">{{ repo.icon }}</span>
+                <div>
+                    <h3>{{ repo.name }}</h3>
+                    <p>{{ repo.desc }}</p>
+                </div>
+                <span class="about-repo-arrow">→</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
-{{ t.about_page.community_text }}
-
-### {{ t.about_page.repo }}
-
-The code is hosted on [GitHub](https://github.com/deeplang-org/deeplang). Check out our [Wiki](https://github.com/deeplang-org/deeplang/wiki) for more details.
-
-If you would like to know more about us, please email [Eric](mailto:swubear@163.com), [Joey](mailto:joey.teng.dev@gmail.com) or [Thomas](mailto:wenzhang5800@gmail.com).
+<!-- Contact -->
+<section class="section section-alt">
+    <div class="section-inner">
+        <h2 class="about-section-title">{{ a.contact.title }}</h2>
+        <p class="about-contact-intro">{{ a.contact.text }}</p>
+        <div class="about-contacts">
+            {% for person in a.contact.items %}
+            <a href="mailto:{{ person.mail }}" class="about-contact-card">
+                <span class="contact-avatar">{{ person.label | slice: 0 }}</span>
+                <div>
+                    <span class="contact-name">{{ person.label }}</span>
+                    <span class="contact-mail">{{ person.mail }}</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

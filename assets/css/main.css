@@ -1005,6 +1005,257 @@ img {
     background: var(--color-bg-secondary);
 }
 
+/* --- About Page --- */
+.about-hero {
+    background: var(--color-hero-bg);
+    padding: 64px 24px 56px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.about-hero-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-hero h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.about-hero-sub {
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+}
+
+.about-mission {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-mission h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.about-mission p {
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+}
+
+.about-section-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* --- Timeline --- */
+.timeline {
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--color-border);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 36px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--color-bg);
+    border: 2px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.timeline-year {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+.timeline-body {
+    padding-top: 2px;
+}
+
+.timeline-body h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.timeline-body p {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* --- Repo Cards --- */
+.about-repos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.about-repo-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.about-repo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--color-card-shadow);
+    border-color: var(--color-primary);
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.about-repo-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.about-repo-card div {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-repo-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+.about-repo-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.about-repo-arrow {
+    font-size: 1.1rem;
+    color: var(--color-text-tertiary);
+    flex-shrink: 0;
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.about-repo-card:hover .about-repo-arrow {
+    transform: translateX(3px);
+    color: var(--color-primary);
+}
+
+/* --- Contact Cards --- */
+.about-contact-intro {
+    text-align: center;
+    color: var(--color-text-secondary);
+    max-width: 550px;
+    margin: 0 auto 28px;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.about-contacts {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.about-contact-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 18px 24px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    min-width: 190px;
+    flex: 1;
+}
+
+.about-contact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--color-card-shadow);
+    border-color: var(--color-primary);
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.contact-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    text-transform: uppercase;
+}
+
+.contact-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: block;
+}
+
+.contact-mail {
+    font-size: 0.8rem;
+    color: var(--color-text-tertiary);
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
 /* --- Post Layout --- */
 .post {
     max-width: 800px;
@@ -1275,6 +1526,23 @@ img {
 
     .download-cards {
         grid-template-columns: 1fr;
+    }
+
+    .about-repos {
+        grid-template-columns: 1fr;
+    }
+
+    .about-contacts {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about-contact-card {
+        min-width: auto;
+    }
+
+    .timeline {
+        padding-left: 32px;
     }
 
     .features-grid {
