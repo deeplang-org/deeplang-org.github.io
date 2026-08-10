@@ -556,6 +556,47 @@ img {
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
 
+/* --- Run Button --- */
+.code-run-btn {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.06);
+    color: #c3e88d;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-family: inherit;
+}
+
+.code-run-btn:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.25);
+    color: #a5d6ff;
+}
+
+.code-run-btn:active {
+    transform: scale(0.97);
+}
+
+.code-run-btn.running {
+    color: #ffcb6b;
+    border-color: rgba(255,203,107,0.3);
+    pointer-events: none;
+}
+
+.code-run-btn.done {
+    color: #8b949e;
+    border-color: rgba(255,255,255,0.08);
+    pointer-events: none;
+}
+
+/* --- Syntax Highlighting (dark theme #1e1e2e) --- */
 .code-block pre {
     margin: 0;
     padding: 24px 20px;
@@ -564,17 +605,127 @@ img {
 
 .code-block code {
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-    font-size: 0.9rem;
-    line-height: 1.65;
+    font-size: 0.875rem;
+    line-height: 1.7;
     color: #e6edf3;
 }
 
-/* Syntax highlighting for DeepLang code */
-.code-block .kw { color: #ff7b72; }   /* fun, if, else, return, let, type, interface, impl, for, match */
-.code-block .ty { color: #79c0ff; }   /* i32, Bool, String, custom types */
-.code-block .fn { color: #d2a8ff; }   /* function names */
-.code-block .op { color: #ffa657; }   /* operators */
-.code-block .co { color: #8b949e; font-style: italic; } /* comments */
+/* Keywords */
+.code-block .kw { color: #c792ea; font-style: italic; }
+/* Types */
+.code-block .ty { color: #82aaff; }
+/* ADT variants */
+.code-block .adt { color: #ffcb6b; }
+/* Functions / methods */
+.code-block .fn { color: #82aaff; }
+/* Numbers */
+.code-block .num { color: #f78c6c; }
+/* Comments */
+.code-block .co { color: #546e7a; font-style: italic; }
+
+/* --- Compilation Animation --- */
+.code-compile {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 20px 24px;
+    background: rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+.compile-label {
+    font-size: 0.8rem;
+    color: #ffcb6b;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+.compile-stages {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.compile-stage {
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.72rem;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    color: rgba(255,255,255,0.3);
+    transition: all 0.2s ease;
+}
+
+.compile-stage.done {
+    background: rgba(130,170,255,0.12);
+    border-color: rgba(130,170,255,0.25);
+    color: #82aaff;
+}
+
+.compile-stage.active {
+    background: rgba(255,203,107,0.12);
+    border-color: rgba(255,203,107,0.3);
+    color: #ffcb6b;
+}
+
+.compile-arr {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.15);
+    transition: color 0.2s ease;
+}
+
+.compile-arr.done {
+    color: rgba(130,170,255,0.4);
+}
+
+.compile-progress {
+    height: 3px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.compile-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #82aaff, #c792ea, #ffcb6b);
+    border-radius: 2px;
+    transition: width 0.35s ease;
+}
+
+/* --- Terminal Output --- */
+.code-output {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    background: rgba(0,0,0,0.25);
+    animation: fadeIn 0.4s ease;
+}
+
+.output-label {
+    padding: 14px 24px 0;
+    font-size: 0.78rem;
+    color: #c3e88d;
+    font-weight: 600;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+.code-output pre {
+    margin: 0;
+    padding: 12px 24px 20px;
+}
+
+.code-output code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #c3e88d;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
 
 /* --- DeepVM Section --- */
 .vm-content {

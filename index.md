@@ -91,42 +91,65 @@ description: DeepLang — A Memory-Safe Programming Language for AIoT & Edge AI
             <h2>{{ t.code_example.title }}</h2>
             <p>{{ t.code_example.subtitle }}</p>
         </div>
-        <div class="code-block">
+        <div class="code-block" id="codeBlock">
             <div class="code-block-header">
                 <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
                 <span class="code-filename">geometry.dp</span>
+                <button class="code-run-btn" id="runBtn" onclick="runCode()" title="Compile & Run">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M4 2v12l10-6z"/></svg>
+                    Run
+                </button>
             </div>
-{% highlight c %}
-// Algebraic data type for geometric shapes
-type Shape [
-    Rectangle(width: F64, height: F64),
-    Circle(radius: F64),
-    Nothing
+<pre><code><span class="co">// Algebraic data type for geometric shapes</span>
+<span class="kw">type</span> <span class="ty">Shape</span> [
+    <span class="adt">Rectangle</span>(width: <span class="ty">F64</span>, height: <span class="ty">F64</span>),
+    <span class="adt">Circle</span>(radius: <span class="ty">F64</span>),
+    <span class="adt">Nothing</span>
 ]
 
-// Interface for area calculation
-interface Area {
-    fun area(this) -> F64;
+<span class="co">// Interface for area calculation</span>
+<span class="kw">interface</span> <span class="ty">Area</span> {
+    <span class="kw">fun</span> <span class="fn">area</span>(<span class="kw">this</span>) -&gt; <span class="ty">F64</span>;
 }
 
-// Implement Area for Shape using pattern matching
-impl Area for Shape {
-    fun area() -> F64 {
-        match (this) {
-            Rectangle(w, h) => { return w * h; }
-            Circle(r)       => { return 3.14159 * r * r; }
-            Nothing         => { return 0.0; }
+<span class="co">// Implement Area for Shape using pattern matching</span>
+<span class="kw">impl</span> <span class="ty">Area</span> <span class="kw">for</span> <span class="ty">Shape</span> {
+    <span class="kw">fun</span> <span class="fn">area</span>() -&gt; <span class="ty">F64</span> {
+        <span class="kw">match</span> (<span class="kw">this</span>) {
+            <span class="adt">Rectangle</span>(w, h) =&gt; { <span class="kw">return</span> w * h; }
+            <span class="adt">Circle</span>(r)       =&gt; { <span class="kw">return</span> <span class="num">3.14159</span> * r * r; }
+            <span class="adt">Nothing</span>         =&gt; { <span class="kw">return</span> <span class="num">0.0</span>; }
         }
     }
 }
 
-fun main() -> () {
-    let rect: Shape = Rectangle(3.0, 4.0);
-    let circ: Shape = Circle(2.5);
-    print(rect.area().toString());  // 12.0
-    print(circ.area().toString());  // 19.6349
-}
-{% endhighlight %}
+<span class="kw">fun</span> <span class="fn">main</span>() -&gt; () {
+    <span class="kw">let</span> rect: <span class="ty">Shape</span> = <span class="adt">Rectangle</span>(<span class="num">3.0</span>, <span class="num">4.0</span>);
+    <span class="kw">let</span> circ: <span class="ty">Shape</span> = <span class="adt">Circle</span>(<span class="num">2.5</span>);
+    <span class="fn">print</span>(rect.<span class="fn">area</span>().<span class="fn">toString</span>());  <span class="co">// 12.0</span>
+    <span class="fn">print</span>(circ.<span class="fn">area</span>().<span class="fn">toString</span>());  <span class="co">// 19.6349</span>
+}</code></pre>
+            <!-- Compilation & Output -->
+            <div class="code-compile" id="codeCompile" style="display:none">
+                <div class="compile-label">Compiling...</div>
+                <div class="compile-stages" id="compileStages">
+                    <span class="compile-stage">Lexer</span>
+                    <span class="compile-arr">→</span>
+                    <span class="compile-stage">Parser</span>
+                    <span class="compile-arr">→</span>
+                    <span class="compile-stage">Semantic</span>
+                    <span class="compile-arr">→</span>
+                    <span class="compile-stage">ANF</span>
+                    <span class="compile-arr">→</span>
+                    <span class="compile-stage">WAT</span>
+                </div>
+                <div class="compile-progress"><div class="compile-bar" id="compileBar"></div></div>
+            </div>
+            <div class="code-output" id="codeOutput" style="display:none">
+                <div class="output-label">▶ Terminal Output</div>
+<pre><code>12.0
+19.6349375</code></pre>
+            </div>
         </div>
     </div>
 </section>

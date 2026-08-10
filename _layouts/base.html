@@ -105,6 +105,56 @@
         })();
     </script>
 
+    {% if page.layout == 'base' %}
+    <script>
+        // Code block compiler animation
+        var _codeRan = false;
+        function runCode() {
+            if (_codeRan) return;
+            _codeRan = true;
+            var btn = document.getElementById('runBtn');
+            var compile = document.getElementById('codeCompile');
+            var output = document.getElementById('codeOutput');
+            var bar = document.getElementById('compileBar');
+            var stages = document.querySelectorAll('#compileStages .compile-stage');
+            var arrows = document.querySelectorAll('#compileStages .compile-arr');
+
+            btn.classList.add('running');
+            btn.innerHTML = '<span class="spin"></span> Compiling...';
+            compile.style.display = 'block';
+
+            // Animate pipeline stages
+            var delays = [0, 400, 800, 1200, 1600];
+            stages.forEach(function(s, i) {
+                setTimeout(function() {
+                    if (i > 0) { stages[i-1].classList.remove('active'); stages[i-1].classList.add('done'); }
+                    if (i > 0 && arrows[i-1]) arrows[i-1].classList.add('done');
+                    s.classList.add('active');
+                    bar.style.width = ((i+1) * 20) + '%';
+                }, delays[i]);
+            });
+
+            // Complete
+            setTimeout(function() {
+                stages[stages.length-1].classList.remove('active');
+                stages[stages.length-1].classList.add('done');
+                bar.style.width = '100%';
+                btn.classList.remove('running');
+                btn.classList.add('done');
+                btn.innerHTML = '&#10003; Done';
+                setTimeout(function() {
+                    compile.style.display = 'none';
+                    output.style.display = 'block';
+                }, 400);
+            }, 2000);
+        }
+    </script>
+    <style>
+        .spin { display:inline-block; width:12px; height:12px; border:2px solid rgba(255,203,107,0.3); border-top-color:#ffcb6b; border-radius:50%; animation:spin 0.6s linear infinite; }
+        @keyframes spin { to { transform:rotate(360deg); } }
+    </style>
+    {% endif %}
+
     {% if site.google_analytics %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
