@@ -1,8 +1,8 @@
 ---
 layout: base
-lang: en
+lang: zh
 title: DeepLang
-description: DeepLang — A Memory-Safe Programming Language for IoT Devices
+description: DeepLang —— 面向 IoT 设备的内存安全编程语言
 ---
 {% assign t = site.data[page.lang] %}
 
@@ -116,7 +116,7 @@ fun main() -> () {
             {% for uni in t.team.universities %}
             <div class="team-card">
                 <div class="uni-name">{{ uni.name }}</div>
-                <div class="uni-role">Core Contributor</div>
+                <div class="uni-role">核心贡献者</div>
             </div>
             {% endfor %}
         </div>

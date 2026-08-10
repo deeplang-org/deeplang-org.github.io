@@ -1,0 +1,118 @@
+---
+# Base layout - used by all pages
+# Expects page.lang to be set (defaults to "en")
+---
+{% assign lang = page.lang | default: "en" %}
+{% assign t = site.data[lang] %}
+{% comment %} Compute language switch URL: map equivalent pages {% endcomment %}
+{% if lang == 'en' %}
+  {% assign switch_url = page.url | replace_first: '/', '/zh/' %}
+  {% if switch_url == '/zh/' %}{% assign switch_url = '/zh/' %}{% endif %}
+{% else %}
+  {% assign switch_url = page.url | replace_first: '/zh/', '/' %}
+  {% if switch_url == '/' %}{% assign switch_url = '/' %}{% endif %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    <title>{% if page.title %}{{ page.title }} — {% endif %}DeepLang</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/images/logo.jpg' | relative_url }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="{{ '/' | relative_url }}" class="nav-logo">
+                <img src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="DeepLang" width="32" height="32">
+                <span class="nav-brand">DeepLang</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="{{ '/' | relative_url }}">{{ t.nav.home }}</a>
+                <a href="{{ '/about/' | relative_url }}">{{ t.nav.about }}</a>
+                <a href="{{ '/news/' | relative_url }}">{{ t.nav.news }}</a>
+                <a href="{{ '/talks/' | relative_url }}">{{ t.nav.talks }}</a>
+                <a href="https://github.com/deeplang-org/deeplang" target="_blank" rel="noopener" class="nav-gh-link">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                    {{ t.nav.github }}
+                </a>
+                <a href="{{ switch_url | relative_url }}" class="nav-lang-switch" id="langSwitch">
+                    {{ t.nav.lang }}
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <p>{{ t.footer.maintained }}</p>
+                <p class="footer-sm">{{ t.footer.published }}</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:swubear@163.com">{{ t.contact.email }}</a>
+                <a href="https://github.com/deeplang-org/deeplang" target="_blank" rel="noopener">{{ t.contact.github }}</a>
+                <a href="https://github.com/deeplang-org/deeplang/wiki" target="_blank" rel="noopener">{{ t.contact.wiki }}</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        document.getElementById('navToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('open');
+            this.classList.toggle('open');
+        });
+        // Sticky nav shadow
+        window.addEventListener('scroll', function() {
+            var nav = document.getElementById('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+        // Persist language preference
+        (function() {
+            var langSwitch = document.getElementById('langSwitch');
+            if (langSwitch) {
+                langSwitch.addEventListener('click', function(e) {
+                    var targetLang = this.href.indexOf('/zh/') >= 0 ? 'zh' : 'en';
+                    try { localStorage.setItem('deeplang-lang', targetLang); } catch(ex) {}
+                });
+            }
+            // Redirect if user has a stored preference and is on the wrong root
+            var stored = null;
+            try { stored = localStorage.getItem('deeplang-lang'); } catch(ex) {}
+            if (stored === 'zh' && window.location.pathname === '/' && !window.location.search) {
+                // Don't auto-redirect; just suggest via the switcher
+            }
+        })();
+    </script>
+
+    {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+</body>
+</html>

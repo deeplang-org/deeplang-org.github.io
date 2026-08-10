@@ -1,25 +1,13 @@
 ---
+layout: base
+lang: en
+title: 404
 permalink: /404.html
-layout: default
 ---
+{% assign t = site.data[page.lang] %}
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div class="page-404">
+    <h1>404</h1>
+    <p>{{ t.not_found.message }}</p>
+    <a href="{{ '/' | relative_url }}" class="btn btn-primary">{{ t.not_found.go_home }}</a>
 </div>

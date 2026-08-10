@@ -1,8 +1,8 @@
 ---
 layout: page
-lang: en
-title: Latest News
-permalink: /news/
+lang: zh
+title: 最新动态
+permalink: /zh/news/
 ---
 {% assign t = site.data[page.lang] %}
 
@@ -13,7 +13,7 @@ permalink: /news/
     {% for post in news_posts %}
     <li>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+        <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
         {{ post.excerpt | markdownify }}
     </li>
     {% endfor %}

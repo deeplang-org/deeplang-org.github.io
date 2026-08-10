@@ -1,8 +1,8 @@
 ---
 layout: page
-lang: en
-title: Talks & Events
-permalink: /talks/
+lang: zh
+title: 讲座与活动
+permalink: /zh/talks/
 ---
 {% assign t = site.data[page.lang] %}
 
@@ -13,7 +13,7 @@ permalink: /talks/
     {% for post in talk_posts %}
     <li>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+        <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
         {{ post.excerpt | markdownify }}
     </li>
     {% endfor %}

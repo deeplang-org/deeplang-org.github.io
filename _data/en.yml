@@ -1,0 +1,105 @@
+# English i18n strings for Deeplang.org
+
+nav:
+  home: "Home"
+  about: "About"
+  news: "News"
+  talks: "Talks"
+  github: "GitHub"
+  lang: "中文"
+
+hero:
+  title: "DeepLang"
+  subtitle: "A Memory-Safe Programming Language for IoT Devices"
+  description: "DeepLang is a modern, memory-safe programming language designed for resource-constrained IoT environments. With a C-style syntax, strong static typing, and multi-paradigm support, it combines safety with performance."
+  github_button: "View on GitHub"
+  learn_more: "Learn More"
+
+features:
+  title: "Language Features"
+  subtitle: "Designed for safety and productivity in IoT development"
+  items:
+    - title: "Memory Safe"
+      description: "Borrow checker and ownership system inspired by Rust, preventing null pointer dereference, buffer overflow, and use-after-free bugs at compile time."
+      icon: "🛡️"
+    - title: "Strong Static Typing"
+      description: "Rich type system with algebraic data types (ADTs), pattern matching, and type inference for catching errors early."
+      icon: "🔒"
+    - title: "C-Style Syntax"
+      description: "Familiar syntax for C/C++ developers, making it easy to learn and adopt. Curly braces, semicolons, and familiar control flow."
+      icon: "📝"
+    - title: "Multi-Paradigm"
+      description: "Supports procedural, object-oriented (via interfaces), and functional programming paradigms in one coherent language."
+      icon: "🧩"
+    - title: "Interface System"
+      description: "Static dispatch polymorphism through interfaces — no virtual tables, no runtime overhead. Clean separation of behavior and data."
+      icon: "🔌"
+    - title: "Pattern Matching"
+      description: "Expressive pattern matching on ADTs, tuples, structs, and literals. Destructuring with compile-time exhaustiveness checking."
+      icon: "🎯"
+
+code_example:
+  title: "Try DeepLang"
+  subtitle: "A quick look at the syntax — Fibonacci sequence"
+
+deepvm:
+  title: "DeepVM"
+  subtitle: "A lightweight virtual machine purpose-built for IoT"
+  description: "DeepVM is the runtime that powers DeepLang on embedded devices. It's designed to be small, fast, and portable across microcontroller architectures."
+  specs:
+    - label: "ROM Footprint"
+      value: "≤ 100 KB"
+    - label: "RAM Usage"
+      value: "≤ 50 KB"
+    - label: "WASM Support"
+      value: "Yes"
+    - label: "Interactive REPL"
+      value: "Built-in"
+  targets:
+    title: "Supported Chips"
+    items:
+      - "Espressif ESP32"
+      - "Huawei HI3861"
+      - "Loongson 1C0300B"
+
+team:
+  title: "Team"
+  subtitle: "Students and researchers from leading universities"
+  universities:
+    - name: "Zhejiang University (ZJU)"
+    - name: "USTC"
+    - name: "Imperial College London"
+  ccb: "Core Team"
+  contact: "Contact Us"
+  join: "Interested in contributing? We welcome new members!"
+
+contact:
+  email: "Email"
+  github: "GitHub"
+  wiki: "Wiki"
+
+footer:
+  maintained: "Maintained by the DeepLang community"
+  published: "Published with GitHub Pages"
+
+news_page:
+  title: "Latest News"
+  no_posts: "No news yet."
+
+talks_page:
+  title: "Talks & Events"
+  no_posts: "No talks yet."
+
+about_page:
+  title: "About DeepLang"
+  intro: "DeepLang is an open-source programming language designed by students from ZJU, USTC, Imperial College London and other universities. We are building a safe, efficient, and developer-friendly language for the IoT era."
+  origins: "Origins"
+  origins_text: "Started in 2020, DeepLang was born from the idea that IoT development shouldn't sacrifice safety for performance. Existing languages either require large runtimes (Python, JavaScript), lack memory safety (C, C++), or are too complex for constrained devices."
+  community: "Community"
+  community_text: "Our community includes students, researchers, and industry professionals passionate about programming languages, compilers, and embedded systems. We hold regular talks and workshops."
+  repo: "Source Code"
+
+not_found:
+  title: "404 — Page Not Found"
+  message: "The page you're looking for doesn't exist."
+  go_home: "Go Home"
