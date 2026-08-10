@@ -166,6 +166,7 @@ about_page:
   contact:
     title: "Get in Touch"
     text: "Interested in DeepLang? Want to contribute, collaborate, or just learn more? Reach out to the team."
+    hint: "Click to email"
     items:
       - label: "Eric"
         mail: "swubear@163.com"

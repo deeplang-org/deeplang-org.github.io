@@ -166,6 +166,7 @@ about_page:
   contact:
     title: "联系我们"
     text: "对 DeepLang 感兴趣？想贡献代码、参与合作或了解更多？欢迎联系团队成员。"
+    hint: "点击发送邮件"
     items:
       - label: "Eric"
         mail: "swubear@163.com"

@@ -76,7 +76,7 @@ permalink: /zh/about/
                 <span class="contact-avatar">{{ person.label | slice: 0 }}</span>
                 <div>
                     <span class="contact-name">{{ person.label }}</span>
-                    <span class="contact-mail">{{ person.mail }}</span>
+                    <span class="contact-mail">{{ a.contact.hint }}</span>
                 </div>
             </a>
             {% endfor %}
