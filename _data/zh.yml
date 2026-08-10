@@ -10,20 +10,20 @@ nav:
 
 hero:
   title: "DeepLang"
-  subtitle: "面向 IoT 设备的内存安全编程语言"
-  description: "DeepLang 是一种现代、内存安全的编程语言，专为资源受限的 IoT 环境设计。采用 C 风格语法、强静态类型系统和多范式支持，兼顾安全与性能。"
+  subtitle: "面向 AIoT 与边缘 AI 的内存安全编程语言"
+  description: "DeepLang 是一种现代、内存安全的编程语言，专为资源受限的 AIoT 和边缘 AI 环境设计。采用 C 风格语法、强静态类型系统和无缝 WASM 编译，助力开发者在边缘端构建安全、高效、可移植的智能应用。"
   github_button: "在 GitHub 上查看"
   learn_more: "了解更多"
 
 features:
   title: "语言特性"
-  subtitle: "为 IoT 开发而生，兼顾安全与生产力"
+  subtitle: "为 AIoT 与边缘 AI 开发而生，兼顾安全与生产力"
   items:
     - title: "内存安全"
-      description: "借鉴 Rust 的所有权与借用检查机制，在编译期杜绝空指针解引用、缓冲区溢出和 use-after-free 等内存错误。"
+      description: "借鉴 Rust 的所有权与借用检查机制，在编译期杜绝空指针解引用、缓冲区溢出和 use-after-free 等内存错误——这对可靠的边缘 AI 推理至关重要。"
       icon: "🛡️"
     - title: "强静态类型"
-      description: "丰富的类型系统，支持代数数据类型（ADT）、模式匹配和类型推断，在早期捕获错误。"
+      description: "丰富的类型系统，支持代数数据类型（ADT）、模式匹配、接口和类型推断。形式化类型检查器在代码运行于设备之前确保正确性。"
       icon: "🔒"
     - title: "C 风格语法"
       description: "熟悉的 C/C++ 风格语法，容易上手。花括号、分号和熟悉的控制流结构。"
@@ -38,27 +38,52 @@ features:
       description: "丰富的模式匹配系统，支持 ADT、元组、结构体和字面量的解构，编译期穷举性检查。"
       icon: "🎯"
 
+compiler:
+  title: "编译器与类型系统"
+  subtitle: "基于 OCaml 实现的编译器前端，目标为 WebAssembly"
+  description: "DeepLang 编译器前端使用 OCaml 实现，借助其强大类型系统保证编译器自身的正确性。它通过多阶段流水线将 DeepLang 源码编译为 WebAssembly——适用于边缘设备的通用运行时。"
+  pipeline:
+    - name: "词法分析"
+      desc: "源码 Token 化"
+    - name: "语法解析"
+      desc: "构建抽象语法树"
+    - name: "语义遍历"
+      desc: "类型检查与符号解析"
+    - name: "ANF 转换"
+      desc: "基于 CPS 的规范化"
+    - name: "WAT 代码生成"
+      desc: "生成 WASM 文本格式"
+  highlights:
+    title: "类型系统亮点"
+    items:
+      - "形式化类型检查器，支持 ADT 穷举性验证"
+      - "模式匹配编译到 ANF 分支结构"
+      - "接口方法表合并，支持继承"
+      - "Bump Allocator 内存模型，可预测延迟"
+      - "编译到 WASM，实现可移植的边缘部署"
+  repo: "类型系统仓库"
+
 code_example:
   title: "一试便知"
   subtitle: "Fibonacci 数列 —— 快速感受 DeepLang 语法"
 
 deepvm:
   title: "DeepVM"
-  subtitle: "为 IoT 量身定制的轻量级虚拟机"
-  description: "DeepVM 是驱动 DeepLang 在嵌入式设备上运行的虚拟机。它被设计得小巧、快速且可移植到各种微控制器架构。"
+  subtitle: "为 AIoT 边缘设备量身定制的轻量级虚拟机"
+  description: "DeepVM 是驱动 DeepLang 在嵌入式和边缘 AI 设备上运行的虚拟机。拥有超紧凑的体积和原生 WASM 支持，能在微控制器和 AIoT 芯片上安全、高效地执行代码。"
   specs:
     - label: "ROM 占用"
       value: "≤ 100 KB"
     - label: "RAM 占用"
       value: "≤ 50 KB"
     - label: "WASM 支持"
-      value: "支持"
+      value: "原生"
     - label: "交互式 REPL"
       value: "内置"
   targets:
     title: "支持芯片"
     items:
-      - "乐鑫 ESP32"
+      - "乐鑫 ESP32 (AIoT)"
       - "华为 HI3861"
       - "龙芯 1C0300B"
 
@@ -92,11 +117,11 @@ talks_page:
 
 about_page:
   title: "关于 DeepLang"
-  intro: "DeepLang 是一种由来自浙大、中科大、帝国理工等高校学生共同开发的开源编程语言。我们致力于为 IoT 时代构建一门安全、高效、开发者友好的语言。"
+  intro: "DeepLang 是一种由来自浙大、中科大、帝国理工等高校学生共同开发的开源编程语言。我们致力于为 AIoT 和边缘 AI 时代构建一门安全、高效、开发者友好的语言。"
   origins: "起源"
-  origins_text: "DeepLang 始于 2020 年，源于这样一个理念：IoT 开发不应以牺牲安全性来换取性能。现有的编程语言要么需要庞大的运行时（Python、JavaScript），要么缺乏内存安全（C、C++），要么对资源受限设备过于复杂。"
+  origins_text: "DeepLang 始于 2020 年，源于这样一个理念：AIoT 开发不应以牺牲安全性来换取性能。现有的编程语言要么需要庞大的运行时（Python、JavaScript），要么缺乏内存安全（C、C++），要么对资源受限的边缘设备过于复杂。DeepLang 以现代类型系统、内存安全保证和直接编译到 WebAssembly 填补了这一空白。"
   community: "社区"
-  community_text: "我们的社区包括对编程语言、编译器和嵌入式系统充满热情的学生、研究者和行业专业人士。我们定期举办技术讲座和研讨会。"
+  community_text: "我们的社区包括对编程语言、编译器、类型系统和边缘计算充满热情的学生、研究者和行业专业人士。我们定期举办技术讲座和研讨会，并积极开发编译器工具链。"
   repo: "源代码"
 
 not_found:

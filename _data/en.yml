@@ -10,20 +10,20 @@ nav:
 
 hero:
   title: "DeepLang"
-  subtitle: "A Memory-Safe Programming Language for IoT Devices"
-  description: "DeepLang is a modern, memory-safe programming language designed for resource-constrained IoT environments. With a C-style syntax, strong static typing, and multi-paradigm support, it combines safety with performance."
+  subtitle: "A Memory-Safe Programming Language for AIoT & Edge AI"
+  description: "DeepLang is a modern, memory-safe programming language designed for resource-constrained AIoT and edge AI environments. With a C-style syntax, strong static type system, and seamless WASM compilation, it empowers developers to build safe, efficient, and portable intelligence on the edge."
   github_button: "View on GitHub"
   learn_more: "Learn More"
 
 features:
   title: "Language Features"
-  subtitle: "Designed for safety and productivity in IoT development"
+  subtitle: "Designed for safety and productivity in AIoT & edge AI development"
   items:
     - title: "Memory Safe"
-      description: "Borrow checker and ownership system inspired by Rust, preventing null pointer dereference, buffer overflow, and use-after-free bugs at compile time."
+      description: "Borrow checker and ownership system inspired by Rust, preventing null pointer dereference, buffer overflow, and use-after-free bugs at compile time — critical for reliable edge AI inference."
       icon: "🛡️"
     - title: "Strong Static Typing"
-      description: "Rich type system with algebraic data types (ADTs), pattern matching, and type inference for catching errors early."
+      description: "Rich type system with algebraic data types (ADTs), pattern matching, interfaces, and type inference. A formal type checker ensures correctness before your code runs on-device."
       icon: "🔒"
     - title: "C-Style Syntax"
       description: "Familiar syntax for C/C++ developers, making it easy to learn and adopt. Curly braces, semicolons, and familiar control flow."
@@ -38,27 +38,52 @@ features:
       description: "Expressive pattern matching on ADTs, tuples, structs, and literals. Destructuring with compile-time exhaustiveness checking."
       icon: "🎯"
 
+compiler:
+  title: "Compiler & Type System"
+  subtitle: "An OCaml-powered compiler pipeline targeting WebAssembly"
+  description: "The DeepLang compiler frontend is implemented in OCaml, leveraging its powerful type system for correctness. It compiles DeepLang source code through a multi-stage pipeline into WebAssembly — the universal runtime for edge devices."
+  pipeline:
+    - name: "Lexer"
+      desc: "Tokenizes source code"
+    - name: "Parser"
+      desc: "Builds AST from tokens"
+    - name: "Semantic Walker"
+      desc: "Type checking & symbol resolution"
+    - name: "ANF Conversion"
+      desc: "CPS-based normalization"
+    - name: "WAT Codegen"
+      desc: "Generates WASM text format"
+  highlights:
+    title: "Type System Highlights"
+    items:
+      - "Formal type checker with ADT exhaustiveness verification"
+      - "Pattern match compilation to ANF branching"
+      - "Interface method table merging with inheritance support"
+      - "Bump allocator memory model for predictable latency"
+      - "Compile-to-WASM for portable edge deployment"
+  repo: "Type System Repository"
+
 code_example:
   title: "Try DeepLang"
   subtitle: "A quick look at the syntax — Fibonacci sequence"
 
 deepvm:
   title: "DeepVM"
-  subtitle: "A lightweight virtual machine purpose-built for IoT"
-  description: "DeepVM is the runtime that powers DeepLang on embedded devices. It's designed to be small, fast, and portable across microcontroller architectures."
+  subtitle: "A lightweight virtual machine purpose-built for AIoT edge devices"
+  description: "DeepVM is the runtime that powers DeepLang on embedded and edge AI devices. With an ultra-compact footprint and native WASM support, it enables safe, efficient code execution on microcontrollers and AIoT chipsets."
   specs:
     - label: "ROM Footprint"
       value: "≤ 100 KB"
     - label: "RAM Usage"
       value: "≤ 50 KB"
     - label: "WASM Support"
-      value: "Yes"
+      value: "Native"
     - label: "Interactive REPL"
       value: "Built-in"
   targets:
     title: "Supported Chips"
     items:
-      - "Espressif ESP32"
+      - "Espressif ESP32 (AIoT)"
       - "Huawei HI3861"
       - "Loongson 1C0300B"
 
@@ -92,11 +117,11 @@ talks_page:
 
 about_page:
   title: "About DeepLang"
-  intro: "DeepLang is an open-source programming language designed by students from ZJU, USTC, Imperial College London and other universities. We are building a safe, efficient, and developer-friendly language for the IoT era."
+  intro: "DeepLang is an open-source programming language designed by students from ZJU, USTC, Imperial College London and other universities. We are building a safe, efficient, and developer-friendly language for the AIoT and edge AI era."
   origins: "Origins"
-  origins_text: "Started in 2020, DeepLang was born from the idea that IoT development shouldn't sacrifice safety for performance. Existing languages either require large runtimes (Python, JavaScript), lack memory safety (C, C++), or are too complex for constrained devices."
+  origins_text: "Started in 2020, DeepLang was born from the idea that AIoT development shouldn't sacrifice safety for performance. Existing languages either require large runtimes (Python, JavaScript), lack memory safety (C, C++), or are too complex for resource-constrained edge devices. DeepLang fills this gap with a modern type system, memory safety guarantees, and direct compilation to WebAssembly."
   community: "Community"
-  community_text: "Our community includes students, researchers, and industry professionals passionate about programming languages, compilers, and embedded systems. We hold regular talks and workshops."
+  community_text: "Our community includes students, researchers, and industry professionals passionate about programming languages, compilers, type systems, and edge computing. We hold regular talks and workshops, and actively develop the compiler toolchain."
   repo: "Source Code"
 
 not_found:

@@ -3,7 +3,7 @@ markdown: kramdown
 name: Deeplang.org
 title: Deeplang.org
 author: Deeplang
-description: A memory-safe programming language for IoT devices.
+description: A memory-safe programming language for AIoT & edge AI devices.
 show_downloads: false
 github:
   repository_url: https://github.com/deeplang-org/deeplang
