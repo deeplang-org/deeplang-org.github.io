@@ -121,11 +121,11 @@ download_page:
     source: "Build from Source"
     repo: "deeplang-type-system"
   deepvm:
-    name: "DeepVM"
+    name: "deepvm"
     description: "The DeepLang virtual machine — a lightweight, memory-efficient runtime for AIoT edge devices. Supports native WASM execution, interactive REPL, and bump-allocator memory management. ROM ≤ 100KB, RAM ≤ 50KB."
     latest: "Latest Release"
     source: "Build from Source"
-    repo: "deeplang"
+    repo: "deepvm"
   spec:
     name: "Language Specification"
     description: "The official DeepLang language specification — syntax, type system, semantics, and standard library documentation. Essential reference for language users and contributors."

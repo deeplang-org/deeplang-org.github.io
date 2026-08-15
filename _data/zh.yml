@@ -121,11 +121,11 @@ download_page:
     source: "从源码构建"
     repo: "deeplang-type-system"
   deepvm:
-    name: "DeepVM"
+    name: "deepvm"
     description: "DeepLang 虚拟机 —— 为 AIoT 边缘设备打造的轻量级、高效率运行时。支持原生 WASM 执行、交互式 REPL 和 Bump Allocator 内存管理。ROM ≤ 100KB，RAM ≤ 50KB。"
     latest: "最新发布"
     source: "从源码构建"
-    repo: "deeplang"
+    repo: "deepvm"
   spec:
     name: "语言规范"
     description: "DeepLang 官方语言规范 —— 涵盖语法、类型系统、语义和标准库文档。语言用户和贡献者的必备参考。"
